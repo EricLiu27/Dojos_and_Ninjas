@@ -1,0 +1,34 @@
+INSERT INTO dojos(id,name)
+VALUES (1,"Happy"), (2,'sad'), ('angry');
+
+DELETE FROM dojos WHERE id = 1;
+DELETE FROM dojos WHERE id = 2;
+DELETE FROM dojos WHERE id = 3;
+
+INSERT INTO dojos(id, name)
+VALUES (1, "Hungry"), (2, 'Scary'), (3, 'Sleepy');
+
+INSERT INTO	 ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Eric', 'Liu', 29, 1), ('Kye', 'Clevenger', 19, 1), ('Daisy', 'Torres', 29, 1);
+
+INSERT INTO	 ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Luke', 'Skywalker', 39, 2), ('Han', 'Solo', 28, 2), ('Jabba', 'The Hutt', 16, 2);
+
+INSERT INTO	 ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Kevin', 'Durant', 29, 3), ('Lebron', 'James', 19, 3), ('Kobe', 'Bryant', 29, 3);
+
+SELECT * FROM ninjas 
+WHERE dojo_id = 1;
+
+SELECT * FROM ninjas 
+WHERE dojo_id = 3;
+
+SELECT Dojo_id FROM ninjas
+where id = 9;
+
+SELECT * FROM ninjas
+JOIN dojos ON dojos.id = ninjas.dojo_id
+WHERE ninjas.id = 6;
+
+SELECT * FROM ninjas
+JOIN dojos on dojos.id=ninjas.dojo_id
